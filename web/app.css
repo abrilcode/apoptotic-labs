@@ -677,3 +677,6 @@ body.landing #topbar { justify-content: flex-end; background: transparent; borde
 .landing-list li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 2px; border-bottom: 1px solid var(--border); font-size: 13px; }
 #landing-result pre { margin: 0 0 10px; padding: 10px 12px; text-align: left; overflow-x: auto; background: var(--code-bg); border: 1px solid var(--border); border-radius: var(--r); }
 #landing-result pre code { background: none; border: 0; padding: 0; white-space: pre; }
+
+/* Simple site credit; retain the existing logo sprite asset filename. */
+.site-footer { padding: 20px 24px; text-align: center; color: var(--muted, #777); font-size: 12px; }
