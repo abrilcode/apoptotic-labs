@@ -1,5 +1,5 @@
 """
-apoptotic-lab backend: FastAPI endpoints for the Single image and Multiple images flows (inspect,
+Apoptotic Labs backend: FastAPI endpoints for the Single image and Multiple images flows (inspect,
 segment, edit masks, measure, plots, positivity, display rendering, mask export). GET / serves
 the interface in web/.
 
@@ -313,7 +313,7 @@ async def no_store(request, call_next):
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 
 ENGINE_VERSION = 2      # bump when the API changes in a way the hosted interface must know about
-HOSTED_ORIGINS = r"^https://apoptotic-lab\.vercel\.app$|^https://apoptotic-lab(-[a-z0-9]+)*-abril-desk\.vercel\.app$"
+HOSTED_ORIGINS = r"^https://(?:www\.)?apoptoticlabs\.com$|^https://apoptotic-lab\.vercel\.app$|^https://apoptotic-lab(-[a-z0-9]+)*-abril-desk\.vercel\.app$"
 # Chrome asks before a public site may reach localhost (Private Network Access): the preflight
 # carries Access-Control-Request-Private-Network and needs Access-Control-Allow-Private-Network.
 # Recent Starlette answers it itself (and rejects it unless enabled); older versions ignore it,
@@ -694,7 +694,7 @@ def deps_info():
     return JSONResponse({"ok": not missing and python["ok"], "packages": pkgs, "missing": len(missing),
                          "python": python, "stardist": segment.stardist_available(),
                          "cellpose_weights": weights,
-                         "repo": "https://github.com/abrilcode/apoptotic-lab#installation"})
+                         "repo": "https://github.com/abrilcode/apoptotic-labs#installation"})
 
 
 @app.post("/api/measure_table")
