@@ -1,6 +1,6 @@
 # Outputs
 
-Every result apoptotic-lab produces is a plain file: a CSV table, a JSON record of how the table was
+Every result Apoptotic Labs produces is a plain file: a CSV table, a JSON record of how the table was
 made, the final label masks and PNG plots. This page describes each one.
 
 <picture>
