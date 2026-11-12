@@ -3,7 +3,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-typing-dark.gif">
-    <img src="docs/assets/logo-typing-light.gif" width="380" alt="apoptotic-lab">
+    <img src="docs/assets/logo-typing-light.gif" width="380" alt="Apoptotic Labs">
   </picture>
 </p>
 
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apoptotic-lab.vercel.app"><b>Open the app</b></a> &nbsp;·&nbsp;
+  <a href="https://apoptoticlabs.com"><b>Open the app</b></a> &nbsp;·&nbsp;
   <a href="#installation">Install</a> &nbsp;·&nbsp;
   <a href="#documentation">Docs</a> &nbsp;·&nbsp;
   <a href="#citation">Cite</a>
@@ -69,8 +69,8 @@ Silicon MPS). The Cellpose-SAM weights (about 1.2 GB) are downloaded to `~/.cell
 use.
 
 ```bash
-git clone https://github.com/abrilcode/apoptotic-lab.git
-cd apoptotic-lab
+git clone https://github.com/abrilcode/Apoptotic Labss.git
+cd Apoptotic Labss
 python3 -m venv .venv
 source .venv/bin/activate          # Windows (PowerShell): .venv\Scripts\Activate.ps1
 pip install --upgrade pip
@@ -86,11 +86,11 @@ that matches the driver before `requirements.txt`. StarDist is optional:
 1. **Start the engine** (after the [installation](#installation)) and leave its window open:
 
    ```bash
-   cd apoptotic-lab && source .venv/bin/activate      # Windows: .venv\Scripts\Activate.ps1
+   cd Apoptotic Labss && source .venv/bin/activate      # Windows: .venv\Scripts\Activate.ps1
    uvicorn app:app --host 127.0.0.1 --port 8010
    ```
 
-2. **Open the app at https://apoptotic-lab.vercel.app** and click **Check dependencies**. When
+2. **Open the app at https://apoptoticlabs.com** and click **Check dependencies**. When
    everything is in place it opens the start page; if something is missing it says what to install.
 3. **Choose a flow:**
 
@@ -129,29 +129,29 @@ methods, not accuracy against manual annotation. Full method and results in
 - [docs/VALIDATION.md](docs/VALIDATION.md) — agreement study
 - [docs/OUTPUTS.md](docs/OUTPUTS.md) — output files, columns and parameter record
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — modules and design notes
-- [CHANGELOG.md](CHANGELOG.md) — changes since the thesis version ([v1.0.0](https://github.com/abrilcode/apoptotic-lab/releases/tag/v1.0.0))
+- [CHANGELOG.md](CHANGELOG.md) — changes since the thesis version ([v1.0.0](https://github.com/abrilcode/Apoptotic Labss/releases/tag/v1.0.0))
 
 ## Data and privacy
 
 Images never leave the machine. The local server keeps temporary copies in the system temp folder
 (`pfcv2_upload_*`) until the OS clears it. Do not commit microscopy or patient-derived data to
-this repository. apoptotic-lab is research software, not for diagnostic use.
+this repository. Apoptotic Labs is research software, not for diagnostic use.
 
 ## Citation
 
-apoptotic-lab was developed by Abril Herrlein as the final project of the Bioengineering degree at
+Apoptotic Labs was developed by Abril Herrlein as the final project of the Bioengineering degree at
 the Instituto Tecnológico de Buenos Aires (ITBA), supervised by Dra. María Andrea Camilletti.
 Citation metadata is also available through "Cite this repository" ([CITATION.cff](CITATION.cff)).
 
 ```bibtex
 @thesis{herrlein2026apoptoticlab,
   author      = {Herrlein, Abril},
-  title       = {apoptotic-labs},
+  title       = {Apoptotic Labss},
   year        = {2026}
 }
 ```
 
-Results produced with apoptotic-lab should also cite the segmentation model used:
+Results produced with Apoptotic Labs should also cite the segmentation model used:
 Cellpose-SAM (Pachitariu, Rariden and Stringer, bioRxiv 2025,
 [doi:10.1101/2025.04.28.651001](https://doi.org/10.1101/2025.04.28.651001)) and Cellpose
 (Stringer et al., Nature Methods 2021,
