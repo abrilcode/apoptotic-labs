@@ -1,6 +1,6 @@
-# Agreement study: apoptotic-lab (Cellpose-SAM) vs a published StarDist workflow
+# Agreement study: Apoptotic Labs (Cellpose-SAM) vs a published StarDist workflow
 
-Goal: check that apoptotic-lab's nuclear segmentation and per-nucleus marker measurements agree with
+Goal: check that Apoptotic Labs' nuclear segmentation and per-nucleus marker measurements agree with
 an established, published nuclei-analysis workflow, on the same images, automatically, with
 quantitative metrics and timing. Tested on five datasets; all met the agreement thresholds set
 before the comparison.
@@ -29,7 +29,7 @@ model's 2 × 2 probability grid, about 4 px). The Fiji plugin wraps the same Ten
 the segmentation is identical; running the Fiji interface headless is impractical and
 unnecessary.
 
-**apoptotic-lab's method**: `segment.segment_channel` (Cellpose-SAM, the `cpsam_v2` weights that are
+**Apoptotic Labs' method**: `segment.segment_channel` (Cellpose-SAM, the `cpsam_v2` weights that are
 the default model of the tested Cellpose 4.2.1.1) on the same DAPI channel, exactly as the app
 runs it, on the GPU (Apple MPS); the harness prints and checks the device. On top of StarDist's
 own boundary exclusion, objects with any pixel within 3 px of the image border (scikit-image
@@ -42,14 +42,14 @@ objects touching the image border by default.) Both label sets are measured with
   **count** per image (and Pearson r across images); instance **F1 at IoU ≥ 0.5** and **mean IoU
   of matched nuclei** (are they the same objects, one to one).
 - Measurement agreement: **per-nucleus mean intensity** of each marker on matched nuclei → Pearson r.
-- Timing: wall-clock time of the reference (StarDist) and of apoptotic-lab (Cellpose-SAM).
+- Timing: wall-clock time of the reference (StarDist) and of Apoptotic Labs (Cellpose-SAM).
 
 Agreement thresholds, set before the comparison: Dice ≥ 0.85, count r ≥ 0.90, F1 at IoU ≥ 0.5
 ≥ 0.70, per-marker intensity r ≥ 0.90.
 
 ## Summary (5 datasets, all within the thresholds)
 
-| Dataset | Fields | Nuclei, reference / apoptotic-lab | Dice | F1 (IoU ≥ 0.5) | Matched IoU | Count r | Intensity r (markers) | Time, reference / apoptotic-lab (s) |
+| Dataset | Fields | Nuclei, reference / Apoptotic Labs | Dice | F1 (IoU ≥ 0.5) | Matched IoU | Count r | Intensity r (markers) | Time, reference / Apoptotic Labs (s) |
 |---|---|---|---|---|---|---|---|---|
 | Public example set | 16 | 3862 / 3768 | 0.950 | 0.949 | 0.897 | 0.9994 | 0.998 / 0.998 | 8.6 / 178 |
 | Maru (FN/R1 D40) | 11 | 1218 / 1233 | 0.956 | 0.965 | 0.910 | 0.9978 | 0.999 / 0.9996 | 4.6 / 121 |
@@ -76,7 +76,7 @@ per-nucleus marker intensity r from 0.997 to 0.9996.
 | Per-nucleus intensity r, NANOG | 0.998 | ≥ 0.90 | yes |
 | Per-nucleus intensity r, OCT6 | 0.998 | ≥ 0.90 | yes |
 
-Nuclei: 3862 (reference) and 3768 (apoptotic-lab). Within all thresholds.
+Nuclei: 3862 (reference) and 3768 (Apoptotic Labs). Within all thresholds.
 Timing: reference 8.6 s in total (about 0.5 s per image, CPU); Cellpose-SAM 178 s (about 11 s per
 image, GPU).
 
@@ -97,7 +97,7 @@ Fields (11): `20X-FN-D15-Foto1`, `20X-FN-D40-Foto1..5`, `20X-R1-D40-Foto1..5`.
 | Per-nucleus intensity r, FOXA2-488 | 0.9987 | ≥ 0.90 | yes |
 | Per-nucleus intensity r, NANOG-594 | 0.9996 | ≥ 0.90 | yes |
 
-Nuclei: 1218 (reference) and 1233 (apoptotic-lab). Within all thresholds.
+Nuclei: 1218 (reference) and 1233 (Apoptotic Labs). Within all thresholds.
 Timing: reference 4.6 s in total (about 0.4 s per image, CPU); Cellpose-SAM 121 s (about 11 s per
 image, GPU).
 
@@ -126,7 +126,7 @@ intensity r AF488 0.9985 / RP647 0.9983. Reference 12.8 s, Cellpose-SAM 472 s (t
 images, 16-bit at full resolution, about 31 s per field). Within all thresholds.
 
 ## Conclusion
-On all five datasets apoptotic-lab's results agree closely with the reference nuclear analysis:
+On all five datasets Apoptotic Labs' results agree closely with the reference nuclear analysis:
 segmentations are highly concordant (Dice about 0.95, F1 at IoU ≥ 0.5 from 0.94 to 0.97, matched
 IoU from 0.88 to 0.92) and per-nucleus marker readouts are highly correlated (r from 0.997 to
 0.9996). The main practical difference is speed: the reference StarDist model (small, run on the
