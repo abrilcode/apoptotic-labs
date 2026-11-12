@@ -69,8 +69,8 @@ Silicon MPS). The Cellpose-SAM weights (about 1.2 GB) are downloaded to `~/.cell
 use.
 
 ```bash
-git clone https://github.com/abrilcode/Apoptotic Labss.git
-cd Apoptotic Labss
+git clone https://github.com/abrilcode/apoptotic-labs.git
+cd apoptotic-labs
 python3 -m venv .venv
 source .venv/bin/activate          # Windows (PowerShell): .venv\Scripts\Activate.ps1
 pip install --upgrade pip
@@ -86,7 +86,7 @@ that matches the driver before `requirements.txt`. StarDist is optional:
 1. **Start the engine** (after the [installation](#installation)) and leave its window open:
 
    ```bash
-   cd Apoptotic Labss && source .venv/bin/activate      # Windows: .venv\Scripts\Activate.ps1
+   cd apoptotic-labs && source .venv/bin/activate      # Windows: .venv\Scripts\Activate.ps1
    uvicorn app:app --host 127.0.0.1 --port 8010
    ```
 
@@ -129,7 +129,7 @@ methods, not accuracy against manual annotation. Full method and results in
 - [docs/VALIDATION.md](docs/VALIDATION.md) — agreement study
 - [docs/OUTPUTS.md](docs/OUTPUTS.md) — output files, columns and parameter record
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — modules and design notes
-- [CHANGELOG.md](CHANGELOG.md) — changes since the thesis version ([v1.0.0](https://github.com/abrilcode/Apoptotic Labss/releases/tag/v1.0.0))
+- [CHANGELOG.md](CHANGELOG.md) — changes since the thesis version ([v1.0.0](https://github.com/abrilcode/apoptotic-labs/releases/tag/v1.0.0))
 
 ## Data and privacy
 
@@ -146,7 +146,7 @@ Citation metadata is also available through "Cite this repository" ([CITATION.cf
 ```bibtex
 @thesis{herrlein2026apoptoticlab,
   author      = {Herrlein, Abril},
-  title       = {Apoptotic Labss},
+  title       = {Apoptotic Labs},
   year        = {2026}
 }
 ```
