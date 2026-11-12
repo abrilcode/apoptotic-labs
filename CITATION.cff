@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: >-
-  Work that uses apoptotic-lab should cite the thesis below, and the segmentation
+  Work that uses Apoptotic Labs should cite the thesis below, and the segmentation
   models behind its results (Cellpose-SAM, Cellpose, and StarDist when used),
   as listed in the README.
-title: apoptotic-lab
+title: Apoptotic Labs
 abstract: >-
   Local web application for the segmentation and quantification of
   multichannel fluorescence microscopy images: dataset organisation,
@@ -15,7 +15,7 @@ authors:
   - family-names: Herrlein
     given-names: Abril
     affiliation: Instituto Tecnológico de Buenos Aires (ITBA)
-repository-code: "https://github.com/abrilcode/apoptotic-lab"
+repository-code: "https://github.com/abrilcode/apoptotic-labs"
 license: MIT
 keywords:
   - fluorescence microscopy
@@ -37,4 +37,4 @@ preferred-citation:
   institution:
     name: Instituto Tecnológico de Buenos Aires
   year: 2026
-  url: "https://github.com/abrilcode/apoptotic-lab"
+  url: "https://github.com/abrilcode/apoptotic-labs"
