@@ -146,10 +146,7 @@ Citation metadata is also available through "Cite this repository" ([CITATION.cf
 ```bibtex
 @thesis{herrlein2026apoptoticlab,
   author      = {Herrlein, Abril},
-  title       = {Desarrollo de una plataforma web para segmentaci{\'o}n y cuantificaci{\'o}n
-                 de im{\'a}genes de fluorescencia multicanal},
-  type        = {Proyecto final de carrera, Bioingenier{\'i}a},
-  institution = {Instituto Tecnol{\'o}gico de Buenos Aires},
+  title       = {apoptotic-labs},
   year        = {2026}
 }
 ```
